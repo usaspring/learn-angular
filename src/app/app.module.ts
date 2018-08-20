@@ -4,6 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { VoterComponent } from './voter/voter.component';
 import { VotetakerComponent } from './votetaker/votetaker.component';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -12,7 +16,9 @@ import { VotetakerComponent } from './votetaker/votetaker.component';
     VotetakerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ButtonsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
