@@ -1,0 +1,10 @@
+.toolbar {
+    background-color: #e2e2e2;
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+}
+
+kendo-pdf-export {
+    font-family: "DejaVu Sans", "Arial", sans-serif;
+    font-size: 12px;
+  }

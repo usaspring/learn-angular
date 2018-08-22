@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VoterComponent } from './voter.component';
+import { PdfExportComponent } from './pdf-export.component';
 
-describe('VoterComponent', () => {
-  let component: VoterComponent;
-  let fixture: ComponentFixture<VoterComponent>;
+describe('PdfExportComponent', () => {
+  let component: PdfExportComponent;
+  let fixture: ComponentFixture<PdfExportComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VoterComponent ]
+      declarations: [ PdfExportComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VoterComponent);
+    fixture = TestBed.createComponent(PdfExportComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

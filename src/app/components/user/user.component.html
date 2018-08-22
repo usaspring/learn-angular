@@ -1,0 +1,14 @@
+<kendo-grid [kendoGridBinding]="users" 
+            [pageSize]="5"
+            [pageable]="true"
+            [sortable]="true"
+            [filterable]="true"
+            [selectable]="true"
+            (selectionChange)="onSelectionChanged($event)">
+  <kendo-grid-column field="id" title="ID" width="40"></kendo-grid-column>
+  <kendo-grid-column field="username" title="Name" width="150"></kendo-grid-column>
+</kendo-grid>
+
+<div style="margin-top:10px">
+    <app-user-detail [user]="selectedUser" *ngIf="selectedUser"></app-user-detail>
+</div>

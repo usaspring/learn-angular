@@ -1,0 +1,9 @@
+<div class="toolbar">
+    <button kendo-button (click)="pdf.saveAs('invoice.pdf')">
+      Save As PDF...
+    </button>
+  </div>
+
+  <kendo-pdf-export #pdf paperSize="A4" margin="2cm">
+    <app-invoice [invoices]="invoices"></app-invoice>
+  </kendo-pdf-export>
