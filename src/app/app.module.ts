@@ -13,6 +13,11 @@ import { PDFExportModule } from '@progress/kendo-angular-pdf-export';
 import { InvoiceComponent } from './components/invoice/invoice.component';
 import { IntlModule } from '@progress/kendo-angular-intl';
 import { PdfExportComponent } from './components/pdf-export/pdf-export.component';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs';
+import { UserFormComponent } from './components/user-form/user-form.component';
+import { FormsModule }   from '@angular/forms';
+
 
 
 
@@ -23,7 +28,8 @@ import { PdfExportComponent } from './components/pdf-export/pdf-export.component
     UserComponent,
     UserDetailComponent,
     InvoiceComponent,
-    PdfExportComponent
+    PdfExportComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,9 @@ import { PdfExportComponent } from './components/pdf-export/pdf-export.component
     GridModule,
     HttpClientModule,
     PDFExportModule,
-    IntlModule
+    IntlModule,
+    ChartsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
