@@ -1,25 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }   from '@angular/forms';
+import { RouterModule, Route } from '@angular/router';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { PDFExportModule } from '@progress/kendo-angular-pdf-export';
+import { IntlModule } from '@progress/kendo-angular-intl';
+import { ChartsModule } from '@progress/kendo-angular-charts';
 
 import { AppComponent } from './app.component';
-import { ButtonsModule } from '@progress/kendo-angular-buttons';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PhotoComponent } from './components/photo/photo.component';
 import { UserComponent } from './components/user/user.component';
-import { GridModule } from '@progress/kendo-angular-grid';
-import { HttpClientModule } from '@angular/common/http';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
-import { PDFExportModule } from '@progress/kendo-angular-pdf-export';
 import { InvoiceComponent } from './components/invoice/invoice.component';
-import { IntlModule } from '@progress/kendo-angular-intl';
 import { PdfExportComponent } from './components/pdf-export/pdf-export.component';
-import { ChartsModule } from '@progress/kendo-angular-charts';
 import 'hammerjs';
 import { UserFormComponent } from './components/user-form/user-form.component';
-import { FormsModule }   from '@angular/forms';
+import { ChartComponent } from './components/dashboard/chart/chart.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DashboardResolver } from './resolvers/DashboardResolver';
 
-
-
+// route definitions
+const routes: Route[] = [
+  { path: 'dashboard', component: DashboardComponent, resolve: { dash: DashboardResolver } },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
+];
 
 @NgModule({
   declarations: [
@@ -29,7 +36,9 @@ import { FormsModule }   from '@angular/forms';
     UserDetailComponent,
     InvoiceComponent,
     PdfExportComponent,
-    UserFormComponent
+    UserFormComponent,
+    ChartComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -40,9 +49,10 @@ import { FormsModule }   from '@angular/forms';
     PDFExportModule,
     IntlModule,
     ChartsModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [DashboardResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
