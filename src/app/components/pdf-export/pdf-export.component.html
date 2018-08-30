@@ -1,9 +1,20 @@
-<div class="toolbar">
-    <button kendo-button (click)="pdf.saveAs('invoice.pdf')">
-      Save As PDF...
-    </button>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body p-0">
+          <div class="p-4">
+            <div class="toolbar">
+              <button kendoButton [primary]="true" (click)="pdf.saveAs('invoice.pdf')">
+                Save As PDF...
+              </button>
+            </div>
+            <kendo-pdf-export #pdf paperSize="A4" margin="2cm">
+              <app-invoice [invoices]="invoices"></app-invoice>
+            </kendo-pdf-export>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <kendo-pdf-export #pdf paperSize="A4" margin="2cm">
-    <app-invoice [invoices]="invoices"></app-invoice>
-  </kendo-pdf-export>
+</div>

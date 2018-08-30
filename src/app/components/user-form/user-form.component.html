@@ -1,16 +1,38 @@
-<div class="row">
-  <div class="col-12 col-sm-6 offset-sm-3">
-    <div class="card">
-      <div class="card-block">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-block">
           <form class="k-form">
             <fieldset>
               <legend>User Detail</legend>
               <label class="k-form-field">
+                <span>User Name</span>
+                <input placeholder="Your User Name" class="k-textbox" />
+              </label>
+              <label class="k-form-field">
                 <span>Full Name</span>
-                <input kendoTextBox placeholder="Your Full Name" class="k-textbox" />
+                <input placeholder="Your Full Name" class="k-textbox" />
+              </label>
+              <label class="k-form-field">
+                  <span>Email</span>
+                  <input placeholder="Your Email" class="k-textbox" />
+              </label>
+              <label class="k-form-field">
+                  <span>Phone</span>
+                  <kendo-maskedtextbox mask="(999) 000-0000" class="form-control"></kendo-maskedtextbox>
+              </label>
+              <label class="k-form-field">
+                  <span>Website</span>
+                  <input placeholder="Your Website" class="k-textbox" />
               </label>
             </fieldset>
+            <div>
+              <button type="submit" class="k-button k-primary">Submit</button>&nbsp;&nbsp;
+              <button class="k-button">Cancel</button>
+            </div>
           </form>
+        </div>
       </div>
     </div>
   </div>

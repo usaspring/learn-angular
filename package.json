@@ -42,6 +42,7 @@
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.0.0",
     "simple-line-icons": "^2.4.1",
+    "toastr": "^2.1.4",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

@@ -26,16 +26,16 @@
       </ng-template>
     </kendo-grid-column>
     <kendo-grid-column field="unitPrice" format="{0:c}" title="Price" width="120"
-                        [style]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}">
+                        [style]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}" [headerStyle]="{'text-align': 'right'}">
     </kendo-grid-column>
     <kendo-grid-column field="qty" title="Pcs." width="120"
-                        [style]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}">
+                        [style]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}" [headerStyle]="{'text-align': 'right'}">
       <ng-template kendoGridFooterTemplate let-column="column">
         {{ totals[column.field].sum }}
       </ng-template>
     </kendo-grid-column>
     <kendo-grid-column field="total" format="{0:c}" title="Total" width="120"
-                        [style]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}">
+                        [style]="{'text-align': 'right'}" [footerStyle]="{'text-align': 'right'}" [headerStyle]="{'text-align': 'right'}">
       <ng-template kendoGridFooterTemplate let-column="column">
         {{ totals[column.field].sum | kendoNumber:'c' }}
       </ng-template>

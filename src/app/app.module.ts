@@ -9,6 +9,7 @@ import { GridModule } from '@progress/kendo-angular-grid';
 import { PDFExportModule } from '@progress/kendo-angular-pdf-export';
 import { IntlModule } from '@progress/kendo-angular-intl';
 import { ChartsModule } from '@progress/kendo-angular-charts';
+import { InputsModule } from '@progress/kendo-angular-inputs';
 
 import { AppComponent } from './app.component';
 import { PhotoComponent } from './components/photo/photo.component';
@@ -25,6 +26,9 @@ import { DashboardResolver } from './resolvers/DashboardResolver';
 // route definitions
 const routes: Route[] = [
   { path: 'dashboard', component: DashboardComponent, resolve: { dash: DashboardResolver } },
+  { path: 'grid', component: UserComponent },
+  { path: 'form', component: UserFormComponent },
+  { path: 'pdf', component: PdfExportComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
@@ -50,6 +54,7 @@ const routes: Route[] = [
     IntlModule,
     ChartsModule,
     FormsModule,
+    InputsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [DashboardResolver],
