@@ -22,6 +22,7 @@ import { UserFormComponent } from './components/user-form/user-form.component';
 import { ChartComponent } from './components/dashboard/chart/chart.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DashboardResolver } from './resolvers/DashboardResolver';
+import { NavHeaderComponent } from './components/layout/nav-header/nav-header.component';
 
 // route definitions
 const routes: Route[] = [
@@ -42,7 +43,8 @@ const routes: Route[] = [
     PdfExportComponent,
     UserFormComponent,
     ChartComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavHeaderComponent
   ],
   imports: [
     BrowserModule,
