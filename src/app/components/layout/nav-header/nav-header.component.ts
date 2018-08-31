@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-header',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-header.component.css']
 })
 export class NavHeaderComponent implements OnInit {
+
+  @Input() logo: string;
+
 
   constructor() { }
 
